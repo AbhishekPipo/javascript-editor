@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <h2>Code Editor</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="code">Code:</label>
+          <textarea class="form-control" id="code" rows="10" [(ngModel)]="code"></textarea>
+        </div>
+        <button class="btn btn-primary" (click)="runCode()" *ngIf="runCodeBtnVisible">Run</button>
+        <button class="btn btn-success" (click)="nextQuestion()" id="nextQuestionBtn" *ngIf="nextQuestionBtnVisible">Next Question</button>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="output">Output:</label>
+          <textarea class="form-control" id="output" rows="10" readonly>{{ output }}</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  
